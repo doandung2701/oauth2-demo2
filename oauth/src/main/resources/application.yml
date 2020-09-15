@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/oauth2?autoreconnect=true"
+    username: "root"
+    password: "1234"
+    tomcat:
+      test-while-idle: true
+      validation-query: select 1
+    platform: mysql
+    initialization-mode: never
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: validate
+
+check-user-scopes: true
+server:
+  port: 9001
+      
